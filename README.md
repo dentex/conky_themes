@@ -14,16 +14,15 @@ I added two (light and dark) more informative, less minimal, conky configuration
 - kernel info
 - uptime
 - CPU freq.
-
 - sunrise
 - sunset
 
 The media player I use is `VLC`, thus I modified the original scripts to get playing info from VLC's built-in web interface. You need to:
 
 - enable the web interface:
-![](/assets/vlc_main_interfaces.png)
+![](/Shelyak/assets/vlc_main_interfaces.png)
 - enter a password (the script is trivially using `test`):
-![](/assets/vlc_lua-http.png)
+![](/Shelyak/assets/vlc_lua-http.png)
 
 ---
 
@@ -43,9 +42,15 @@ Close-up
 ---
 
 ## Requirements:
-- Conky version 1.10.8 or newer (open this  [Link](https://github.com/brndnmtthws/conky) for instalation)
+- Conky version 1.10.8 or newer (open this  [Link](https://github.com/brndnmtthws/conky) for installation).
 - For the weather theme I download the data using `curl` in json format, and use `jq` to process the data, please install first.
-- The start script uses `zenity` to generate a simple selection GUI. [TO-DO]
+- To retrive media playing info, `xmlstarlet` is also used.
+- The start script uses `zenity` to generate a simple selection GUI.
+
+to recap:
+```bash
+   sudo apt install conky curl jq xmlstarlet zenity
+```
 
 I tested this conky configurations on a laptop running `Linux Mint 20.3 Una` (cinnamon edition). 
 
@@ -54,7 +59,9 @@ I tested this conky configurations on a laptop running `Linux Mint 20.3 Una` (ci
   ```bash
   git clone git@github.com:dentex/conky_themes.git
   ```
-- Move desired folders into `~/.config/conky/`
-- Open a folder that will be used and Install all font in fonts folder then update the font cache
-- For the weather part to work properly, you must have an API KEY and a city id (you can get it [Here](https://openweathermap.org) and fill `weather.sh` in the `scripts` folder)
+- Open the theme folder that you want to use and install all the fonts in your user fonts folder (on Linux Mint it's under `~/.local/share/fonts`), then update the font cache.
+- For the weather part to work properly, you must have an API KEY and a city id. A default KEY is provided, but you can get yours [Here](https://openweathermap.org); then modify `weather.sh` in the `scripts` folder accordingly.
 - Execute `start.sh`
+
+## Auto start-up
+This may vary with every distro, but in Linux Mint you can add something like `conky -c $HOME/.config/conky/Shelyak/Shelyak_dark.conf` in the system's start-up applications GUI.
