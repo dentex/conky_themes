@@ -5,10 +5,10 @@
 - Dark
 - Dark & Minimal
 
-### Credits
+## Credits:
 Shelyak theme by [CloseBox73](https://github.com/closebox73), available at Pling.com: [Link](https://www.pling.com/p/1839849/).
 
-### In this fork...
+## In this fork:
 I added two (light and dark) more informative, less minimal, conky configurations, including:
 
 - kernel info
@@ -27,7 +27,7 @@ The media player I use is `VLC`, thus I modified the original scripts to get pla
 
 ---
 
-## Previews
+## Previews:
 ### Shelyak theme
 Light Version
 ![](/Shelyak/previews/light.png)
@@ -37,20 +37,22 @@ Dark Version
 ![](/Shelyak/previews/dark.png)
 Dark & Minimal Version
 ![](/Shelyak/previews/dark_minimal.png)
+Close-up
+![](/Shelyak/previews/close-up.png)
 
 ---
 
-## Requirements
-- Conky version 1.10.8 or newer ( open this  [Link](https://github.com/brndnmtthws/conky) for instalation )
+## Requirements:
+- Conky version 1.10.8 or newer (open this  [Link](https://github.com/brndnmtthws/conky) for instalation)
 - For the weather theme I download the data using `curl` in json format, and use `jq` to process the data, please install first.
-- The start script uses `zenity` to generate a simple selection GUI.
+- The start script uses `zenity` to generate a simple selection GUI. [TO-DO]
 
 I tested this conky configurations on a laptop running `Linux Mint 20.3 Una` (cinnamon edition). 
 
-## How to use theme
+## How to use the themes:
 - Clone this repo issuing:
   ```bash
-  git clone https://github.com/closebox73/Leonis.git
+  git clone git@github.com:dentex/conky_themes.git
   ```
 - Move desired folders into `~/.config/conky/`
 - Open a folder that will be used and Install all font in fonts folder then update the font cache
